@@ -9,7 +9,7 @@
     <!--Drawer Menus-->
     <string name="about">About</string>
     <string name="logout">Logout</string>
-    <string name="feed">My Feed</string>
+    <string name="review">My Feed</string>
     <string name="action_settings">Settings</string>
 
     <!--rating dialog-->
@@ -21,7 +21,12 @@
     <string name="rating_not_provided_error">Please provide us stars.</string>
     <string name="rating_thanks">Thank you!</string>
 
-
+    <!--main Activity -->
+    <string name="hint_first_name">First Name</string>
+    <string name="hint_last_name">Last Name</string>
+    <string name="hint_phone_number">Phone</string>
+    <string name="hint_description">Description</string>
+    <string name="consult_doctor">Consult a Doctor</string>
 
     <!--about fragment-->
     <string name="project_info">Fortitudo is a registered company with

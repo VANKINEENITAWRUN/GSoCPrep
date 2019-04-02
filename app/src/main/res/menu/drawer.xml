@@ -17,7 +17,7 @@
             android:id="@+id/navItemFeed"
             android:checked="true"
             android:icon="@drawable/ic_rss_symbol"
-            android:title="@string/feed" />
+            android:title="@string/review" />
         <item
             android:id="@+id/navItemLogout"
             android:checked="true"
