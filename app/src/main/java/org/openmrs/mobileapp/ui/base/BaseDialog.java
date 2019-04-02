@@ -14,10 +14,6 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.RelativeLayout;
 
-/**
- * Created by amitshekhar on 10/07/17.
- */
-
 public abstract class BaseDialog extends DialogFragment {
 
     private BaseActivity mActivity;
@@ -87,25 +83,4 @@ public abstract class BaseDialog extends DialogFragment {
         }
     }
 
-    public void hideLoading() {
-        if (mActivity != null) {
-            mActivity.hideLoading();
-        }
-    }
-//
-//    public boolean isNetworkConnected() {
-//        return mActivity != null && mActivity.isNetworkConnected();
-//    }
-
-    public void openActivityOnTokenExpire() {
-        if (mActivity != null) {
-            mActivity.openActivityOnTokenExpire();
-        }
-    }
-
-    public void showLoading() {
-        if (mActivity != null) {
-            mActivity.showLoading();
-        }
-    }
 }

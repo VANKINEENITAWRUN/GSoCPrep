@@ -93,25 +93,11 @@ public abstract class BaseActivity<T extends ViewDataBinding, V extends BaseView
         }
     }
 
-//    public boolean isNetworkConnected() {
-//        return NetworkUtils.isNetworkConnected(getApplicationContext());
-//    }
-
-    public void openActivityOnTokenExpire() {
-//        startActivity(LoginActivity.newIntent(this));
-        finish();
-    }
-
-
     @TargetApi(Build.VERSION_CODES.M)
     public void requestPermissionsSafely(String[] permissions, int requestCode) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(permissions, requestCode);
         }
-    }
-
-    public void showLoading() {
-        hideLoading();
     }
 
     private void performDataBinding() {

@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
+        <import type="android.view.View" />
         <variable
             name="viewModel"
             type="org.openmrs.mobileapp.ui.home.MainViewModel" />
@@ -23,7 +24,7 @@
                 android:layout_height="match_parent"
                 android:clipChildren="false">
 
-                <!--<include layout="@layout/content_main" />-->
+                <include layout="@layout/content_main" />
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/fab"
                     android:layout_width="wrap_content"
@@ -83,6 +84,13 @@
             </com.google.android.material.navigation.NavigationView>
 
         </androidx.drawerlayout.widget.DrawerLayout>
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/address_looking_up"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}" />
 
     </FrameLayout>
 

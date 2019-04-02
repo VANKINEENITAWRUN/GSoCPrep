@@ -25,15 +25,15 @@
 
     <!--about fragment-->
     <string name="project_info">Fortitudo is a registered company with
-        Cooperate Afairs Commission of Nigeria - see our certificate here.
+        Cooperate Afairs Commission of Nigeria.
         Through our telemedicine division, Fortitudo Inc. provides 24/7/365 telephone consultations
         to our patients regardless of patient location or ability to pay for service.
         Thanks to our donors and sponsors, Fortitudo now provides free consultations up to 19 consults per month.
         We have certified pool of doctors with diverse experience and training.
         Our doctors train and practice in Africa, America, and Europe.</string>
     <string name="link_website">1. https://www.callnigeriandoc.com</string>
-    <string name="link_git_repo">2.https://github.com/openmrs</string>
-    <string name="link_organization">3.https://openmrs.com/</string>
+    <string name="link_git_repo">2.  https://github.com/openmrs</string>
+    <string name="link_organization">3. https://openmrs.com/</string>
 
     <string name="version">"version"</string>
 </resources>
