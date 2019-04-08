@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
     <data>
         <import type="android.view.View" />
         <variable
@@ -56,7 +57,11 @@
                             android:background="@color/light_gray" />
 
                     </com.google.android.material.appbar.AppBarLayout>
-                    <include layout="@layout/content_main" />
+                    <include
+                        android:id="@+id/content"
+                        layout="@layout/content_main"
+                        bind:viewModel="@{viewModel}"
+                        />
                 </LinearLayout>
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

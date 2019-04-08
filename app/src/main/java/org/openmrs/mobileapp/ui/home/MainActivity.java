@@ -4,13 +4,13 @@ import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.core.view.GravityCompat;
 import androidx.databinding.DataBindingUtil;
-import androidx.databinding.library.baseAdapters.BR;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
@@ -21,6 +21,7 @@ import androidx.lifecycle.ViewModelProviders;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import org.openmrs.mobileapp.BR;
 import org.openmrs.mobileapp.BuildConfig;
 import org.openmrs.mobileapp.R;
 import org.openmrs.mobileapp.databinding.ActivityMainBinding;
@@ -106,6 +107,18 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
     @Override
     public void openLoginActivity() {
 
+    }
+
+    @Override
+    public void submitConsultation() {
+        String firstName=mActivityMainBinding.content.firstName.getText().toString();
+        String lastName=mActivityMainBinding.content.lastName.getText().toString();
+        String phoneNumber=mActivityMainBinding.content.phoneNumber.getText().toString();
+        String description=mActivityMainBinding.content.description.getText().toString();
+
+        if(mMainViewModel.verifyDetails(firstName,lastName,phoneNumber,description)){
+            mMainViewModel.insertDetails(firstName,lastName,phoneNumber,description);
+        }
     }
 
     @Override
