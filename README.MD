@@ -1,2 +1,2 @@
-<!--<!--[![Coverage Status](https://coveralls.io/repos/github/VANKINEENITAWRUN/GSoCPrep/badge.svg?branch=master)](https://coveralls.io/github/VANKINEENITAWRUN/GSoCPrep?branch=master)-->-->
-![Travis-ci](https://api.travis-ci.org/VANKINEENITAWRUN/GSoCPrep.svg)
+[![codecov](https://codecov.io/gh/VANKINEENITAWRUN/GSoCPrep/branch/master/graph/badge.svg)](https://codecov.io/gh/VANKINEENITAWRUN/GSoCPrep)
+![Travis-ci](https://api.travis-ci.com/VANKINEENITAWRUN/GSoCPrep.png?branch=master)
