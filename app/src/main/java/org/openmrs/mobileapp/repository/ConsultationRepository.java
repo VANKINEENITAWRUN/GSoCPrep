@@ -22,12 +22,20 @@ public class ConsultationRepository {
         mAllConsultations = mConsultationDao.getConsultations();
     }
 
+    public ConsultationRepository(AppDatabase db){
+        mConsultationDao=db.consultationDao();
+        mAllConsultations=mConsultationDao.getConsultations();
+    }
+
     // Room executes all queries on a separate thread.
     // Observed LiveData will notify the observer when the data has changed.
-    LiveData<List<Consultation>> getAllConsultations() {
+    public LiveData<List<Consultation>> getAllConsultations() {
         return mAllConsultations;
     }
 
+    public List<Consultation> findConsultationByFirstName(String firstName){
+        return mConsultationDao.getConsultationByFirstName(firstName);
+    }
     // You must call this on a non-UI thread or your app will crash.
     // Like this, Room ensures that you're not doing any long running operations on the main
     // thread, blocking the UI.

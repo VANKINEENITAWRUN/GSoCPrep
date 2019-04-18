@@ -21,4 +21,7 @@ public interface ConsultationDao {
 
     @Query("DELETE FROM consultation_table")
     void deleteAll();
+
+    @Query("SELECT * from consultation_table where first_name = :firstName")
+    List<Consultation> getConsultationByFirstName(String firstName);
 }

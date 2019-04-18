@@ -1,6 +1,7 @@
 package org.openmrs.mobileapp.ui.home;
 import android.app.Application;
 
+import androidx.annotation.NonNull;
 import androidx.databinding.ObservableField;
 
 
@@ -11,11 +12,11 @@ import org.openmrs.mobileapp.ui.base.BaseViewModel;
 
 public class MainViewModel extends BaseViewModel<MainNavigator> {
 
-    private ConsultationRepository mRepository;
+    private ConsultationRepository mconsultationRepository;
 
-    public MainViewModel(Application application) {
+    public MainViewModel(@NonNull Application application) {
         super(application);
-        mRepository = new ConsultationRepository(application);
+        mconsultationRepository = new ConsultationRepository(application);
     }
 
     private final ObservableField<String> appVersion = new ObservableField<>();
@@ -58,7 +59,7 @@ public class MainViewModel extends BaseViewModel<MainNavigator> {
 
     public void insertDetails(String firstname,String lastname, String phonenumber,String description){
         Consultation consultation=new Consultation("",firstname, lastname, phonenumber, description);
-        mRepository.insert(consultation);
+        mconsultationRepository.insert(consultation);
     }
 
     public void onSubmitClick(){
